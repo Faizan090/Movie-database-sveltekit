@@ -10,13 +10,13 @@
     let api_key = import.meta.env.OMDB_KEY
 
     onMount(async () => {
-    let response = await fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=29de6b07&s=batman`);
+    let response = await fetch(`http://www.omdbapi.com/ [Your API KEY] &s=batman`);
     let json = await response.json();
     fetchedData.set(json.Search);
 })
 
 let searchmovie = async (inputvalue) => {
-        let response = await fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=29de6b07&s=${inputvalue}`);
+        let response = await fetch(`http://www.omdbapi.com/ [Your API KEY] &s=${inputvalue}`);
         let json = await response.json();
         fetchedData.set(json.Search);
 }
